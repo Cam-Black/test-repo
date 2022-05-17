@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS gameshopdbtwo;
+CREATE DATABASE IF NOT EXISTS my_new_shop;
 
-USE gameshopdbtwo;
+USE my_new_shop;
 
 CREATE TABLE IF NOT EXISTS customers (
 customer_id int auto_increment,
