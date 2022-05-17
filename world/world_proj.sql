@@ -3,9 +3,6 @@ USE world;
 -- Using COUNT, get the number of cities in the USA.
 SELECT COUNT(CountryCode) AS NumberOfUSCities FROM city WHERE CountryCode='USA';
 
--- See all fields in Country table
-SELECT * FROM country;
-
 -- Find out the population and life expectancy for people in Argentina.
 SELECT Name, LifeExpectancy, Population FROM country WHERE Code = 'ARG';
 
@@ -13,12 +10,16 @@ SELECT Name, LifeExpectancy, Population FROM country WHERE Code = 'ARG';
 SELECT Name, LifeExpectancy FROM country WHERE LifeExpectancy IS NOT NULL  ORDER BY LifeExpectancy DESC LIMIT 1;
 
 -- Using JOIN ... ON, find the capital city of Spain.
+SELECT country.Name AS Country, city.Name AS Capital FROM country INNER JOIN city ON country.capital=city.ID WHERE country.Name='Spain';
 
 -- Using JOIN ... ON, list all the languages spoken in the Southeast Asia region.
+SELECT DISTINCT country.Region AS Region, countrylanguage.Language AS `Language Spoken` FROM country INNER JOIN countrylanguage ON countrylanguage.CountryCode=country.Code WHERE country.region="Southeast Asia";
 
 -- Using a single query, list 25 cities around the world that start with the letter F.
+SELECT Name AS City FROM city WHERE Name LIKE 'F%' LIMIT 25;
 
 -- Using COUNT and JOIN ... ON, get the number of cities in China.
+SELECT country.Name AS Country, COUNT(countrycode) AS `Number of Cities` FROM city INNER JOIN country ON country.code=city.CountryCode WHERE countrycode='CHN';
 
 -- Using IS NOT NULL, ORDER BY, and LIMIT, which country has the lowest population? Discard non-zero populations.
 
