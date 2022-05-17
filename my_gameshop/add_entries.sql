@@ -1,5 +1,6 @@
 USE my_gameshop;
 
+
 INSERT INTO customers(full_name, email)
 	VALUES('John Doe', 'johndoe@email.com');
 INSERT INTO customers (full_name, email) 
