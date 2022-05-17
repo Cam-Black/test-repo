@@ -17,8 +17,8 @@ INSERT INTO product (product_name, product_price)
 	VALUES('The Witcher 4', 45.99);
 
 INSERT INTO orders(fk_customer_id, fk_product_id)
-	VALUES(1, 1);
+	VALUES(10000, 1);
 INSERT INTO orders (fk_customer_id, fk_product_id) 
-	VALUES(2, 3);
+	VALUES(10002, 3);
 INSERT INTO orders (fk_customer_id, fk_product_id) 
-	VALUES(3, 2);
+	VALUES(10001, 2);

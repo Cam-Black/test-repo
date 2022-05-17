@@ -1,6 +1,7 @@
 CREATE DATABASE IF NOT EXISTS my_gameshop;
 
 USE my_gameshop;
+
 DROP TABLE IF EXISTS orders;
 DROP TABLE IF EXISTS customers;
 DROP TABLE IF EXISTS product;
@@ -10,6 +11,7 @@ CREATE TABLE IF NOT EXISTS customers (
     full_name CHAR(40) NOT NULL,
     email CHAR(50) NOT NULL UNIQUE
 );
+ALTER TABLE customers auto_increment=10000;
 
 CREATE TABLE IF NOT EXISTS product (
 	product_id INT auto_increment PRIMARY KEY,
