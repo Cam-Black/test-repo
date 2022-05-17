@@ -27,3 +27,5 @@ PRIMARY KEY (order_id),
 FOREIGN KEY (fk_customer_id) REFERENCES customers(customer_id) ON DELETE CASCADE,
 FOREIGN KEY (fk_product_id) REFERENCES products(product_id) ON DELETE CASCADE
 );
+
+INSERT INTO products (product_name, price, quantity) VALUES ('bag', 9.99,10), ('hat', 15.99,40), ('laptop', 1009.99, 59), ('Water', 0.99, 17), ('Ball', 10.00, 16);
