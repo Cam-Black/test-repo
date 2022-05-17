@@ -24,5 +24,10 @@ INSERT INTO customers (forename, surname, email) VALUES('Corey', 'Taylor', 'slip
 SELECT * FROM customers;
 
 UPDATE customers SET forename='Jon', surname='smith' WHERE customer_id=1;
+UPDATE customers SET mobile_no='0100001066' WHERE forename='William';
+
+SELECT * FROM customers;
+
+DELETE FROM customers WHERE customer_id >= 4;
 
 SELECT * FROM customers;
