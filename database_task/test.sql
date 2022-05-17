@@ -28,6 +28,6 @@ UPDATE customers SET mobile_no='0100001066' WHERE forename='William';
 
 SELECT * FROM customers;
 
-DELETE FROM customers WHERE customer_id >= 4;
+DELETE FROM customers WHERE mobile_no IS NULL;
 
 SELECT * FROM customers;
