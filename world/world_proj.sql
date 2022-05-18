@@ -47,8 +47,8 @@ WHERE countrycode='CHN';
 -- Using IS NOT NULL, ORDER BY, and LIMIT, which country has the lowest population? Discard non-zero populations.
 SELECT Name AS Country, Population 
 FROM country 
-WHERE Population IS NOT NULL 
-ORDER BY Population ASC 
+WHERE Population IS NOT NULL AND Population > 0
+ORDER BY Population ASC
 LIMIT 1;
 
 -- Using aggregate functions, return the number of countries the database contains.
