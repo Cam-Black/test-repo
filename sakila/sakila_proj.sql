@@ -42,7 +42,9 @@ LIMIT 10;
 -- Find the movies with the longest runtime, without using LIMIT.
 SELECT title AS Movie, length AS Runtime
 FROM film
-ORDER BY length DESC;
+WHERE length = (
+	SELECT MAX(length)
+    FROM film);
 
 -- Find all movies that have deleted scenes.
 SELECT title AS Movie, special_features AS `Special Features`

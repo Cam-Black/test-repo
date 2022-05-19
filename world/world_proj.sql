@@ -70,11 +70,11 @@ WHERE CountryCode=(
 ORDER BY Population DESC LIMIT 5;
 
 -- List the names and country codes of every country with Elizabeth II as its Head of State. You will need to fix the mistake first!
-/* Fixed Mistake for Head of State
+-- Fixes Mistake for Head of State
 UPDATE country 
 SET HeadOfState='Elizabeth II'
 WHERE HeadOfState='Elisabeth II';
-SELECT * FROM country;*/
+SELECT * FROM country; 
 
 SELECT Name AS Country, Code AS `Country Code`
 FROM country 
